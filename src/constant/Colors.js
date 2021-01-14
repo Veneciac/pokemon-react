@@ -9,5 +9,6 @@ export default {
     lightLilac: 'rgb(178, 183, 209)',
     darkLilac: 'rgb(80, 85, 110)'
   },
-  red: { default: 'rgb(202, 55, 44)' }
+  red: { default: 'rgb(202, 55, 44)' },
+  lilac: { default: 'rgb(204, 209, 237)' }
 };

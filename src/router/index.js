@@ -22,7 +22,7 @@ const Router = () => {
   return (
     <BrowserRouter history={ history }>
       <Switch>
-        <Route key={ 'Detail' } path={ '/detail:code' } component={ Detail }/>
+        <Route key={ 'Detail' } path={ '/detail/:name' } component={ Detail }/>
         <Route key={ 'Dashboard' } path={ '' } component={ Dashboard } initial/>
       </Switch>
     </BrowserRouter>

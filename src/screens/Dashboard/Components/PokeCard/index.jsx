@@ -4,10 +4,10 @@ import { Container, StyledImage } from './style';
 
 const PokeCard = props => {
   let {
-    id, name, url, image
+    id, name, image, onClickDetail
   } = props;
   return (
-    <Container>
+    <Container onClick={ () => onClickDetail(name) }>
       <StyledImage src={ image }/>
       <h6>
         { name }

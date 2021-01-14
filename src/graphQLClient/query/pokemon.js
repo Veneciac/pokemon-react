@@ -10,7 +10,6 @@ const GET_POKEMONS = gql`
       message
       results {
         id
-        url
         name
         image
       }
@@ -18,4 +17,27 @@ const GET_POKEMONS = gql`
   }
 `;
 
-export { GET_POKEMONS };
+const GET_DETAIL_POKEMON = gql`
+query pokemon($name: String!) {
+  pokemon(name: $name) {
+    id
+    name
+    height
+    weight
+    sprites {
+      front_default
+    }
+    moves {
+      move {
+        name
+      }
+    }
+    types {
+      type {
+        name
+      }
+    }
+  }
+}
+`;
+export { GET_POKEMONS, GET_DETAIL_POKEMON };
