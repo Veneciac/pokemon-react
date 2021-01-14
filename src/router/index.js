@@ -5,24 +5,17 @@ import {
   Router as BrowserRouter
 } from 'react-router-dom';
 
-import { Dashboard, Detail } from 'screens';
+import {
+  Dashboard, Detail, MyPokemon
+} from 'screens';
 import { History as history } from 'helpers';
-
-const publicRoutes = [
-  {
-    path: '/',
-    component: Dashboard,
-  }, {
-    path: '/detail',
-    component: Detail,
-  },
-];
 
 const Router = () => {
   return (
     <BrowserRouter history={ history }>
       <Switch>
         <Route key={ 'Detail' } path={ '/detail/:name' } component={ Detail }/>
+        <Route key={ 'MyPokemon' } path={ '/my-pokemon' } component={ MyPokemon }/>
         <Route key={ 'Dashboard' } path={ '' } component={ Dashboard } initial/>
       </Switch>
     </BrowserRouter>

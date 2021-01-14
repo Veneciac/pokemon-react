@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { IoIosArrowBack } from 'react-icons/io';
 
 import { addPokemon } from 'store/pokemon/actions';
-import { Loading,  } from 'components';
+import { Loading } from 'components';
 import { CatchModal } from './Components';
 import { GET_DETAIL_POKEMON } from 'graphQLClient/query/pokemon';
 
@@ -77,6 +77,7 @@ const Detail = props => {
       if (index === -1) {
         props.addPokemon({
           ...pokemon,
+          image: pokemon.sprites.front_default,
           nickname: name,
         });
         notification.success({

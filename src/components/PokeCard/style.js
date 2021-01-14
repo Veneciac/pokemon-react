@@ -1,11 +1,14 @@
 import styled from '@emotion/styled';
-import { Row } from 'antd';
 import { Colors } from 'constant';
-import { Image } from 'components';
+import { Image, Button } from 'components';
 
 const Container = styled.div`
   background-color: ${Colors.white.default} ;
   border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 
   h6 {
     color: ${Colors.grey.darkLilac};
@@ -29,4 +32,10 @@ const StyledImage = styled(Image)`
   object-fit: contain;
 `;
 
-export { Container, StyledImage };
+const ReleaseButton = styled(Button)`
+  border-radius: 10px;
+`;
+
+export {
+  Container, StyledImage, ReleaseButton
+};

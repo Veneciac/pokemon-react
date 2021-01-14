@@ -10,7 +10,7 @@ const addPokemon = (state, payload) => {
 
 const releasePokemon = (state, payload) => {
   let newState = JSON.parse(JSON.stringify(state));
-  newState.list.filter(pokemon => pokemon.nickname !== payload);
+  newState.list = newState.list.filter(pokemon => pokemon.nickname !== payload);
   return newState;
 };
 
