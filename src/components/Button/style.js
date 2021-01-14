@@ -8,7 +8,7 @@ export const CustomButton = styled(Button)`
   margin: 15px;
   font-weight: bold;
 
-  &:active, :focus {
+  &:active, :focus, :hover {
     background: ${Colors.red.default};
     border: none;
     color: ${Colors.white.default};

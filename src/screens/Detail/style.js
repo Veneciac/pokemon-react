@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
-import { Tag, Modal } from 'antd';
+import { Tag } from 'antd';
 import { Button } from 'components';
 import { Colors } from 'constant';
+import { Screen } from 'helpers';
 
 const Container = styled.div`
   min-height: 100vh;
@@ -55,7 +56,8 @@ const ImageContainer = styled.div`
     height: 45%;
     position: absolute;
     border-radius: 100%;
-    /*opacity: 0.5;*/
+    max-width: 400px;
+    z-index: -1;
   }
 `;
 
@@ -69,6 +71,7 @@ const CatchButton = styled(Button)`
   position: absolute;
   bottom: 15px;
   border-radius: 10px;
+  max-width: 400px;
 `;
 
 export {

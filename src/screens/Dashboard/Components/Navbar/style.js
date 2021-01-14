@@ -3,6 +3,7 @@ import { Row } from 'antd';
 
 import { Image } from 'components';
 import { Colors } from 'constant';
+import { Screen } from 'helpers';
 
 const Navbar = styled(Row)`
   min-height: 50px;
@@ -18,12 +19,7 @@ const Navbar = styled(Row)`
     font-weight: bold;
     margin-left: 20px;
   }
-  
-  .nav-col-input {
-    margin-left: auto;
-    margin-right: 15px;
-  }
-
+ 
   .nav-owned {
     color: ${Colors.white.default};
     font-size: 16px;
@@ -31,6 +27,11 @@ const Navbar = styled(Row)`
     margin-bottom: unset;
     font-weight: bold;
     margin-left: 10px;
+  }
+  @media ${Screen.sizesMin.xs} {
+    .nav-owned {
+      margin-right: 20px;
+    }
   }
 `;
 

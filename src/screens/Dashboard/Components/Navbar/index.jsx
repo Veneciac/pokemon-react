@@ -15,7 +15,7 @@ const CutomNavbar = ({
         </h1>
       </Col>
       <Col onClick={ onClickMyPokemon } span={ 4 }>
-        <Row>
+        <Row justify='end'>
           <NavBarImage src={ Images.pokeball }/>
           <h1 className='nav-owned'>
             { pokemons }
