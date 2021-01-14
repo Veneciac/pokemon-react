@@ -1,5 +1,20 @@
-const action = {};
+import ACTIONS from './actionTypes';
 
-action.SET_MY_POKEMON = 'SET_MY_POKEMON';
+const addPokemon = pokemon => {
+  return {
+    type: ACTIONS.ADD_POKEMON,
+    payload: pokemon,
+  };
+};
 
-export default action;
+const releasePokemon = nickname => {
+  return {
+    type: ACTIONS.RELEASE_POKEMON,
+    payload: nickname,
+  };
+};
+
+export {
+  addPokemon,
+  releasePokemon
+};

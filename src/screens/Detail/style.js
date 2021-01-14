@@ -1,16 +1,37 @@
 import styled from '@emotion/styled';
-import { Tag } from 'antd';
-
+import { Tag, Modal } from 'antd';
+import { Button } from 'components';
 import { Colors } from 'constant';
 
 const Container = styled.div`
   min-height: 100vh;
-  background-color: ${Colors.lilac.default};
 
   h1 {
     margin-bottom: unset;
     margin-top: 10px;
+    font-weight: bold;
   }
+
+  .back-container{
+    background-color: ${Colors.red.default};
+    border-radius: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    .back-icon {
+      color: ${Colors.white.default};
+    }
+    p {
+      color: ${Colors.white.default};
+      margin-bottom: unset;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+  }
+
 `;
 
 const StyledImage = styled.img`
@@ -34,7 +55,7 @@ const ImageContainer = styled.div`
     height: 45%;
     position: absolute;
     border-radius: 100%;
-    opacity: 0.5;
+    /*opacity: 0.5;*/
   }
 `;
 
@@ -42,6 +63,14 @@ const StyledTag = styled(Tag)`
   margin: 3px;
   border-radius: 10px;
 `;
+
+const CatchButton = styled(Button)`
+  width: 94%;
+  position: absolute;
+  bottom: 15px;
+  border-radius: 10px;
+`;
+
 export {
-  Container, StyledImage, ImageContainer, StyledTag
+  Container, StyledImage, ImageContainer, StyledTag, CatchButton,
 };

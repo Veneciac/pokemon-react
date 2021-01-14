@@ -6,6 +6,7 @@ export const CustomInput = styled(Input)`
   border-radius: 10px;
   background-color: rgb(245, 246, 255);
   border-color: ${Colors.grey.lightLilac};
+  margin-top: 10px;
   
   input {
     background-color: transparent;

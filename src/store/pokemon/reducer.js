@@ -1,16 +1,25 @@
-import ACTIONS from './actions';
+import ACTIONS from './actionTypes';
 
-const initialState = {};
+const initialState = { list: [], };
 
-const setMyPokemon = (state, payload) => {
+const addPokemon = (state, payload) => {
   let newState = JSON.parse(JSON.stringify(state));
+  newState.list.push(payload);
+  return newState;
+};
+
+const releasePokemon = (state, payload) => {
+  let newState = JSON.parse(JSON.stringify(state));
+  newState.list.filter(pokemon => pokemon.nickname !== payload);
   return newState;
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-  case ACTIONS.SET_MY_POKEMON:
-    return setMyPokemon(state, action.payload);
+  case ACTIONS.ADD_POKEMON:
+    return addPokemon(state, action.payload);
+  case ACTIONS.RELEASE_POKEMON:
+    return releasePokemon(state, action.payload);
   default:
     return state;
   }
