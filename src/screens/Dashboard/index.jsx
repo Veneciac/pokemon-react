@@ -13,7 +13,7 @@ const Dashboard = props => {
   const history = useHistory();
 
   const gqlVariables = {
-    limit: 100,
+    limit: 50,
     offset: 1,
   };
   const {
